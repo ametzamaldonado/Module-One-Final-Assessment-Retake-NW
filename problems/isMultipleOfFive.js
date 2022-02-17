@@ -13,8 +13,8 @@
 * returns: false (because the string "ten" is not a number)
 */
 
-function isMultipleOfFive() {
-
+function isMultipleOfFive(n) {
+    return n % 5 === 0;
 }
 
 module.exports = isMultipleOfFive
