@@ -15,18 +15,14 @@
 */
 
 function countWords(arr) {
-    let obj = {};
-    let word = arr[0];
-    let wordCount = 0;
-    for (i = 1; i < arr.length; i++){
-        if (word === arr[i]){
-            wordCount += 1;
-        }
-        if (i === arr.length - 1 && word !== arr[i]){
-            word = arr[++0];
-        }
+    //console.log(arr) - [ 'hi', 'hey', 'yo', 'the' ]
+    let obj = {}; // will be used to store the words as a key-value pair 
+    for (let i = 0; i < arr.length; i++){
+        let word = arr[i]; // each element will be keys inside the map (with no repeats)
+        obj[word] = (obj[word] + 1) || 1; // If the word does not yet exist, create a new key and assign “1” as the value. If the word (the key) already exists, then simply increment that value by 1.
     }
-  return obj[word] = wordCount;
+  return obj;
+  //console.log(obj); - { hi: 1, hey: 1, yo: 1, the: 1 }
 }
 
 module.exports = countWords

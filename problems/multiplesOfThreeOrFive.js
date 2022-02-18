@@ -26,16 +26,14 @@
 
 function multiplesOfThreeOrFive(n) {
     let sum = 0;
-    let num = 0;
 
-    while (num <= n) {
-        if(num % 3 === 0 || num % 5 === 0){
-            sum += num;
-            break;
+    for (let i = 0; i <= n; i++) {
+        if(i % 3 === 0 || i % 5 === 0){
+            sum += i;
+            console.log(sum);
         }
-        num++;
     }
-    //console.log(sum);
+    return sum;
 }
 
 module.exports = multiplesOfThreeOrFive
