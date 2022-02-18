@@ -12,14 +12,13 @@
 */
 
 function removeStringsEndingInBang(arr) {
+    let emptyArr = [];
     for (let i = 0; i < arr.length; i++){
-        for (let j = 0; j < arr[i].length; j++){
-            if(arr[i][j === arr[i].length - 1].includes("!")){
-                arr.splice(i, 1);
-            }
+        if(!arr[i].charAt(arr[i].length - 1).includes("!")){
+            emptyArr.push(arr[i])
         }
     }
-    return arr;
+    return emptyArr;
 }
 
 module.exports = removeStringsEndingInBang

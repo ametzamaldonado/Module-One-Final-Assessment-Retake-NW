@@ -26,11 +26,14 @@
 
 function multiplesOfThreeOrFive(n) {
     let sum = 0;
+    let multiples = [];
 
-    for (let i = 0; i <= n; i++) {
+    for (let i = 0; i < n; i++) {
+        multiples.push(i);
+    }
+    for (let i = 0; i < multiples.length; i++){
         if(i % 3 === 0 || i % 5 === 0){
-            sum += i;
-            console.log(sum);
+            sum += multiples[i];
         }
     }
     return sum;

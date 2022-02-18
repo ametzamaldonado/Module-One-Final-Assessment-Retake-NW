@@ -12,15 +12,15 @@
  * returns: 'Kevin'
  */
 function oldestPerson(obj) {
-    let oldest;
+    let oldest = 0; //variables have to be outside of the loop to avoid it changing values as it runs.
+    let oldestName = '';
     for (let name in obj){
-        oldest = obj[name]
-        console.log(oldest);
         if (oldest < obj[name]){
             oldest = obj[name]
+            oldestName = name
         }
     }
-    return oldest;
+    return oldestName;
 }
 
 module.exports = oldestPerson

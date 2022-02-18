@@ -9,7 +9,7 @@
 * ex: sumEvenNumbers([4, 3, 10])
 * returns: 14
 */
-function sumEvenNumbers() {
+function sumEvenNumbers(arr) {
 
 }
 
