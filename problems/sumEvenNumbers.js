@@ -10,7 +10,15 @@
 * returns: 14
 */
 function sumEvenNumbers(arr) {
-
+    let sum = 0;
+    console.log(arr)
+    for (let i = 0; i < arr.length; i++){
+        console.log(i)
+        if(arr[i] % 2 === 0){
+            sum += arr[i];
+        }
+    }
+    return sum;
 }
 
 module.exports = sumEvenNumbers

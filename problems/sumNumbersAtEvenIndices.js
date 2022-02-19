@@ -11,8 +11,12 @@
 * ex: sumNumbersAtEvenIndices([5, 0, 15, 0, 25, 0])
 * returns: 45
 */
-function sumNumbersAtEvenIndices() {
-
+function sumNumbersAtEvenIndices(arr) {
+    let summedNumbers = arr[0];
+    for(let i = 2; i < arr.length; i+=2){
+        summedNumbers += arr[i];
+    }
+    return summedNumbers;
 }
 
 module.exports = sumNumbersAtEvenIndices

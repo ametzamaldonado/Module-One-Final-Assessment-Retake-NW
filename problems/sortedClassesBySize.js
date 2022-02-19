@@ -12,8 +12,8 @@
 */
 
 function sortClassesBySize(arr) {
-    let sortedArray = arr.sort((subjectCount1, subjectCount2) => {
-        return subjectCount1.studentCount - subjectCount2.studentCount;});
+    let sortedArray = arr.sort((a, b) => {
+        return a.studentCount - b.studentCount;});
 
     let sortedClasses = [];
 
